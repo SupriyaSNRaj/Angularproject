@@ -1,0 +1,45 @@
+<div class="employeeDetails">
+  <h2>Add Details</h2>
+  <label class="input">Code :</label>
+  <input type="number" class="code-input" #code /> <br />
+  <br />
+  <label class="input">Name:</label>
+  <input type="text" class="name-input" #name /> <br />
+  <br />
+  <label class="input">Gender :</label>
+  <input
+    type="radio"
+    name="g"
+    id="Female"
+    value="Female"
+    class="gender-input"
+    #gender
+    (click)="genderName = gender.value"
+  />
+  <label for="female">Female</label>
+  <input
+    type="radio"
+    name="g"
+    id="Male"
+    value="Male"
+    #gendermale
+    (click)="genderName = gendermale.value"
+  />
+  <label for="male">Male</label>
+  <br />
+  <br />
+  <label class="input">Salary :</label>
+  <input type="number" class="salary-input" #salary /> <br />
+  <br />
+  <label class="input">Dob :</label>
+  <input type="date" class="dob-input" #dob /> <br />
+  <br />
+  <button
+    (click)="
+      onSubmitClick(code.value, name.value, genderName, salary.value, dob.value)
+    "
+    class="btn"
+  >
+    Submit
+  </button>
+</div>

@@ -1,0 +1,36 @@
+.employeeDet {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .employeeDet td, .employeeDet th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .employeeDet tr
+  {
+    background-color:#f2f2f2;
+  }
+  
+  .employeeDet tr:hover {background-color: #ddd;}
+  
+  .employeeDet th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: yellow;
+    color: black;
+  }
+  h2{
+    width: 20%;
+    padding: 10px 20px;
+    margin:8px 0;
+    display:inline-block;
+    border:1px lightgreen;
+    border-radius:2px;
+    box-sizing: border-box;
+    background-color: bisque;
+    color:black;
+  }

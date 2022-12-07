@@ -1,0 +1,34 @@
+.code-input{
+    margin: 0px;
+    padding:0px;
+}
+.name-input{    
+    margin: 0px;
+    padding:0px;
+}
+.salary-input{
+    margin: 0px;
+    padding:0px;
+}
+.dob-input{
+     margin: 0px;
+    padding:0px;
+}
+.employeeDetails{
+    width: 30%;
+    padding: 5px 20px;
+    margin:8px 0;
+    display:inline-block;
+    border:1px solid;
+    border-radius:2px;
+    box-sizing: border-box;
+    background-color: lightgreen;
+
+}
+.btn{
+    background-color: white;
+    border:none;
+    padding:10px;
+    color: darkgreen;
+}
+
