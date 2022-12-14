@@ -11,10 +11,16 @@ export class ListEmployeeComponent {
     name: string;
     gender: string;
     salary: number;
-    dob: Date;
+    dob: string;
   }[] = [];
 
   employee = 'employeeDet';
 
-  @Input() existingEmployee: any;
+  @Input() existingEmployee: {
+    code: number;
+    name: string;
+    gender: string;
+    salary: number;
+    dob: string;
+  }[] = [];
 }

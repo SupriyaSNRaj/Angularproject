@@ -11,26 +11,27 @@ export class AddEmployeeComponent {
     name: string;
     gender: string;
     salary: number;
-    dob: Date;
+    dob: string;
   }>();
+
   onSubmitClick(
-    code: any,
-    name: string,
+    codeInput: string,
+    nameInput: string,
     gender: string,
-    salary: any,
-    dob: any
+    salaryInput: string,
+    dobInput: string
   ) {
-    if (code && name && gender && salary && dob) {
+    if (codeInput && nameInput && gender && salaryInput && dobInput) {
       this.addEmployee.emit({
-        code,
-        name,
-        gender,
-        salary,
-        dob,
+        code: Number(codeInput),
+        name: nameInput,
+        gender: gender,
+        salary: Number(salaryInput),
+        dob: dobInput,
       });
     } else {
       alert('please enter the data');
     }
   }
-  genderName: any;
+  genderName: string = '';
 }

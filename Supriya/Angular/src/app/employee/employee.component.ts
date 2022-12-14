@@ -6,27 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./employee.component.css'],
 })
 export class EmployeeComponent {
-  existingEmployeeDetails: any[] = [
+  existingEmployeeDetails: {
+    code: number;
+    name: string;
+    gender: string;
+    salary: number;
+    dob: string;
+  }[] = [
     {
       code: 1001,
       name: 'Supriya',
       gender: 'Female',
       salary: 55000,
-      dob: '28/06/1999',
+      dob: '1999-06-28',
     },
     {
       code: 1002,
       name: 'Santosh',
       gender: 'Male',
       salary: 90000,
-      dob: '14/03/1989',
+      dob: '1989-03-14',
     },
     {
       code: 1003,
       name: 'Sneha',
       gender: 'Female',
       salary: 80000,
-      dob: '12/01/1993',
+      dob: '1993-01-12',
     },
   ];
 
@@ -35,7 +41,7 @@ export class EmployeeComponent {
     name: string;
     gender: string;
     salary: number;
-    dob: Date;
+    dob: string;
   }[] = [];
 
   employee(employeeInfo: {
@@ -43,7 +49,7 @@ export class EmployeeComponent {
     name: string;
     gender: string;
     salary: number;
-    dob: Date;
+    dob: string;
   }) {
     if (employeeInfo.salary > 0) {
       console.log(
