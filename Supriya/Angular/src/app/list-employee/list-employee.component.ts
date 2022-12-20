@@ -78,7 +78,5 @@ export class ListEmployeeComponent {
 
       this.inputData[this.inputData.length - 1],
     ];
-
-    console.log(this.existingEmployeeDetails);
   }
 }
