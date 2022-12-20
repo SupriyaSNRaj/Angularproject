@@ -6,13 +6,13 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./add-employee.component.css'],
 })
 export class AddEmployeeComponent {
-  @Output() addEmployee = new EventEmitter<{
+  addEmployee: {
     code: number;
     name: string;
     gender: string;
     salary: number;
     dob: string;
-  }>();
+  }[] = [];
 
   onSubmitClick(
     codeInput: string,
@@ -22,7 +22,7 @@ export class AddEmployeeComponent {
     dobInput: string
   ) {
     if (codeInput && nameInput && gender && salaryInput && dobInput) {
-      this.addEmployee.emit({
+      this.addEmployee.push({
         code: Number(codeInput),
         name: nameInput,
         gender: gender,

@@ -1,10 +1,10 @@
 <div class="employeeDetails">
   <h2>Add Details</h2>
   <label class="input">Code :</label>
-  <input type="number" class="code-input"#codeInput/> <br />
+  <input type="number" class="code-input" #codeInput /> <br />
   <br />
   <label class="input">Name:</label>
-  <input type="text" class="name-input" #nameInput/> <br />
+  <input type="text" class="name-input" #nameInput /> <br />
   <br />
   <label class="input">Gender :</label>
   <input
@@ -26,21 +26,22 @@
     #gendermale
     (click)="genderName = gendermale.value"
   />
-  <label for="male"  class="gender-male">Male</label>
+  <label for="male" class="gender-male">Male</label>
   <br />
   <br />
   <label class="input">Salary :</label>
   <input type="number" class="salary-input" #salaryInput /> <br />
   <br />
   <label class="input">Dob :</label>
-  <input type="date" class="dob-input" #dobInput/> <br />
+  <input type="date" class="dob-input" #dobInput /> <br />
   <br />
   <button
-    (click)="
-      onSubmitClick(codeInput.value, nameInput.value, genderName, salaryInput.value, dobInput.value)
-    "
-    class="btn"
-  >
-    Submit
-  </button>
+    (click)="onSubmitClick(
+        codeInput.value,
+        nameInput.value,
+        genderName,
+        salaryInput.value,
+        dobInput.value)"
+    class="btn">Submit</button>
 </div>
+<app-list-employee [inputData]="addEmployee"></app-list-employee>
